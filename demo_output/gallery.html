@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEVPAZ Scientific Visualization — Demo Gallery</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: Calibri, Arial, sans-serif;
+            background: #f4f6f9;
+            color: #2C3E50;
+            padding: 40px 20px;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        .header h1 {
+            font-size: 36px;
+            color: #1a5276;
+            margin-bottom: 8px;
+        }
+        .header p {
+            font-size: 16px;
+            color: #7F8C8D;
+        }
+        .gallery {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
+        .card {
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            overflow: hidden;
+            transition: transform 0.2s;
+        }
+        .card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+        }
+        .card-header {
+            background: #1a5276;
+            padding: 18px 28px;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+        .card-number {
+            background: #2980b9;
+            color: white;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 16px;
+            flex-shrink: 0;
+        }
+        .card-header h2 {
+            color: white;
+            font-size: 20px;
+            font-weight: 600;
+        }
+        .card-body {
+            padding: 24px;
+        }
+        .card-body p {
+            color: #7F8C8D;
+            font-size: 14px;
+            margin-bottom: 16px;
+            line-height: 1.5;
+        }
+        .card-body img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            border: 1px solid #E0E0E0;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding: 20px;
+            color: #7F8C8D;
+            font-size: 13px;
+        }
+        .footer a {
+            color: #2980b9;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>NEVPAZ Scientific Visualization Toolkit</h1>
+        <p>Demo-Galerie — Alle 6 Visualisierungstypen</p>
+    </div>
+
+    <div class="gallery">
+
+        <div class="card">
+            <div class="card-header">
+                <div class="card-number">1</div>
+                <h2>Forest Plot — Meta-Analyse</h2>
+            </div>
+            <div class="card-body">
+                <p>Methylphenidat vs. Placebo bei ADHS — 7 Studien mit Effektgrößen, Konfidenzintervallen und Gesamteffekt (Diamant). Grüne Punkte = signifikant, blaue = nicht signifikant.</p>
+                <img src="forest_plot.png" alt="Forest Plot — Meta-Analyse">
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <div class="card-number">2</div>
+                <h2>Dopamin-Pathway — Signalweg & Wirkung</h2>
+            </div>
+            <div class="card-body">
+                <p>Vollständiger Dopamin-Signalweg: Synthese (Tyrosin → L-DOPA → Dopamin), beteiligte Hirnregionen (VTA, Substantia Nigra, Präfrontaler Kortex, Nucleus Accumbens, Striatum), Rezeptoren (D1–D5) und klinische Effekte.</p>
+                <img src="dopamin_pathway.png" alt="Dopamin-Pathway-Diagramm">
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <div class="card-number">3</div>
+                <h2>Rezeptor-Bindungsprofil — Radar-Chart</h2>
+            </div>
+            <div class="card-body">
+                <p>Vergleich Aripiprazol vs. Risperidon über 11 Rezeptoren (D2, D3, 5-HT1A, 5-HT2A, 5-HT2C, H1, α1, α2, M1, DAT, SERT). Basierend auf Ki-Werten der PDSP-Datenbank.</p>
+                <img src="binding_profile.png" alt="Rezeptor-Bindungsprofil">
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <div class="card-number">4</div>
+                <h2>Dosis-Wirkungs-Kurven — Hill-Modell</h2>
+            </div>
+            <div class="card-body">
+                <p>ADHS-Medikation: Methylphenidat (EC₅₀=30), Amphetamin (EC₅₀=10) und Atomoxetin (EC₅₀=100) mit logarithmischer Dosisachse und EC₅₀-Markierungen.</p>
+                <img src="dose_response.png" alt="Dosis-Wirkungs-Kurven">
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <div class="card-number">5</div>
+                <h2>Synaptischer Spalt — Dopamin-System</h2>
+            </div>
+            <div class="card-body">
+                <p>Detaildarstellung: Präsynaptische Vesikel, Dopamin-Moleküle im Spalt, DAT-Transporter (Reuptake), Autorezeptoren, postsynaptische D1–D4-Rezeptoren, MAO/COMT-Enzyme. Wirkmechanismus: Methylphenidat (DAT-Blockade).</p>
+                <img src="synaptic_cleft.png" alt="Synaptischer Spalt">
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <div class="card-number">6</div>
+                <h2>PRISMA-Flussdiagramm — Systematisches Review</h2>
+            </div>
+            <div class="card-body">
+                <p>ADHS-Pharmakotherapie: 1.247 identifizierte Artikel → 892 nach Duplikatentfernung → 156 Volltexte → 42 eingeschlossene Studien. Ausschlussgründe: Kein RCT (48), Falsches Outcome (32), Pädiatrisch (21), Keine Volltexte (13).</p>
+                <img src="prisma.png" alt="PRISMA-Flussdiagramm">
+            </div>
+        </div>
+
+    </div>
+
+    <div class="footer">
+        <p>NEVPAZ Scientific Visualization Toolkit | Generiert mit <code>scripts/scientific_viz.py</code></p>
+    </div>
+</body>
+</html>
