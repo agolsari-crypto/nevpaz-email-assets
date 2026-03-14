@@ -1,0 +1,16 @@
+services:
+  nevpaz-llm:
+    build: .
+    container_name: nevpaz-llm
+    restart: unless-stopped
+    env_file:
+      - .env
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./logs:/app/logs
+    healthcheck:
+      test: ["CMD", "python", "-c", "import boto3; print('ok')"]
+      interval: 60s
+      timeout: 10s
+      retries: 3
